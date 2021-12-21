@@ -254,6 +254,10 @@ a:active {
 
 /*Fullscreen Hero Image End*/
 
+.opening-times-container {
+  margin: 32px 0;
+}
+
 /*Image Slider Begin*/
 
 .carousel-container {
@@ -354,6 +358,12 @@ footer section:first-of-type ul {
 
 /*Misc Begin*/
 
+.small-header {
+  font-family: "lora Bold", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
 .stop-scrolling {
   overflow: hidden;
 }
@@ -388,6 +398,11 @@ footer section:first-of-type ul {
 @font-face {
   font-family: "lora semib";
   src: url("../fonts/Lora/Lora-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "lora Bold";
+  src: url("../fonts/Lora/Lora-Bold.ttf");
 }
 
 @font-face {

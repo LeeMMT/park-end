@@ -38,14 +38,13 @@ const mobileMenu = (function () {
 
 const header = (function () {
   const header = document.querySelector("header");
-  const heroText = document.querySelector(".hero-text-wrapper");
 
   const checkScroll = function () {
     const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > 225) {
-      heroText.classList.add("hidden");
+    if (currentScrollPos > 64) {
+      header.classList.add("solid-bg");
     } else {
-      heroText.classList.remove("hidden");
+      header.classList.remove("solid-bg");
     }
   };
 

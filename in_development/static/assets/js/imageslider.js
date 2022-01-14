@@ -1,6 +1,6 @@
 const imageSliderModule = (function () {
   const carouselSlide = document.querySelector(".carousel-slide");
-  const carouselImages = document.querySelectorAll(".carousel-slide img");
+  const carouselImages = document.querySelectorAll(".story-board");
   //Buttons
   const previousBtn = document.querySelector("#previousBtn");
   const nextBtn = document.querySelector("#nextBtn");
@@ -12,14 +12,14 @@ const imageSliderModule = (function () {
 
   nextBtn.addEventListener("click", () => {
     if (counter >= carouselImages.length - 1) return;
-    carouselSlide.style.transition = "transform 0.2s ease-in-out";
+    carouselSlide.style.transition = "transform 0.5s ease-in-out";
     counter++;
     carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
   });
 
   previousBtn.addEventListener("click", () => {
     if (counter <= 0) return;
-    carouselSlide.style.transition = "transform 0.2s ease-in-out";
+    carouselSlide.style.transition = "transform 0.5s ease-in-out";
     counter--;
     carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
   });

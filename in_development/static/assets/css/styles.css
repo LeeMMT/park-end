@@ -20,8 +20,15 @@
 
 /*Foundation Start*/
 
+.splash {
+  padding: 64px 0;
+  background-color: #648767;
+  margin: 64px 0;
+}
+
 .container {
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -85,6 +92,13 @@ p.company-name {
   font-family: "poppins med", Arial, Helvetica, sans-serif;
   font-size: 24px;
   letter-spacing: 3px;
+}
+
+.company-logo {
+  display: block;
+  max-width: 300px;
+  padding: 16px 0;
+  margin: 0 auto;
 }
 
 .nav-wrapper {
@@ -363,6 +377,14 @@ input:focus {
 }
 
 /*Fullscreen Hero Image End*/
+
+.location-img {
+  display: block;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 
 /*Image Slider Begin*/
 

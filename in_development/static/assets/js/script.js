@@ -48,5 +48,5 @@ const header = (function () {
     }
   };
 
-  window.addEventListener("scroll", checkScroll);
+  //window.addEventListener("scroll", checkScroll);
 })();

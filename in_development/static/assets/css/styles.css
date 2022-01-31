@@ -22,7 +22,7 @@
 
 .splash {
   padding: 64px 0;
-  background-color: #648767;
+  background-color: var(--light-grey);
   margin: 64px 0;
 }
 

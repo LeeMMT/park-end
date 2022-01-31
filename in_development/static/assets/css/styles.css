@@ -320,6 +320,10 @@ a:active {
   margin-bottom: 8px;
 }
 
+.hero-content img {
+  max-width: 650px;
+}
+
 input {
   padding: 6px;
   border: solid 2px transparent;
@@ -355,6 +359,7 @@ input:focus {
   width: 100%;
   padding: 16px;
   background-color: hsla(0, 0%, 100%, 0.9);
+  border: solid 1px var(--black);
   text-align: left;
   font-family: "poppins reg", Arial, Helvetica, sans-serif;
 }

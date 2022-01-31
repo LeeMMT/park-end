@@ -671,6 +671,9 @@ span.seperator {
   .nav-wrapper {
     padding: 0 16px;
   }
+  .hero-content {
+    padding: 0 16px;
+  }
   footer {
     padding: 32px 16px;
   }

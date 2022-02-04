@@ -6,14 +6,9 @@ main = Blueprint('main', __name__)
 def home():
 
     company_details = {
-        "name": "Example Name",
-        "title": "Example Title",
-        "description": "Example Description",
-        "website": "examplewebsite.co.uk"
+        "name": "Parkend Farming",
+        "description": "Park End Farming is a family run local business based between Crick & West Haddon",
+        "website": "parkendfarming.co.uk"
     }
 
-    return render_template('index.html', company=company_details)
-
-@main.route("/page2")
-def page2():
-    return render_template('page2.html', title="page2")
+    return render_template('index.html', company=company_details, title="Home")

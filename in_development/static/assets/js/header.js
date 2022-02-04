@@ -8,10 +8,12 @@ const mobileMenu = (function () {
     mobileMenu.classList.toggle("show-menu");
   };
 
-  const menuAnimation = bodymovin.loadAnimation({
+  const initialMenuPath = document.body.classList.contains("home") ? "menu.json" : "menu-black.json";
+
+  let menuAnimation = bodymovin.loadAnimation({
     // animationData: { /* ... */ },
     container: document.querySelector("#menu-container"), // required
-    path: "../static/assets/animations/menu.json", // required
+    path: `../static/assets/animations/${initialMenuPath}`, // required
     renderer: "svg", // required
     loop: false, // optional
     autoplay: false, // optional
@@ -19,7 +21,23 @@ const mobileMenu = (function () {
   });
 
   menuAnimation.goToAndStop(0, true);
-  menuAnimation.setSpeed(2);
+  menuAnimation.setSpeed(3);
+
+  function setMenuAnimation(filePath) {
+    document.querySelector("#menu-container").innerHTML = "";
+
+    menuAnimation = bodymovin.loadAnimation({
+      container: document.querySelector("#menu-container"),
+      path: `../static/assets/animations/${filePath}.json`,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      name: "menuAnimation",
+    });
+
+    menuAnimation.goToAndStop(0, true);
+    menuAnimation.setSpeed(3);
+  }
 
   const animateMenu = function () {
     if (state === "closed") {
@@ -34,19 +52,6 @@ const mobileMenu = (function () {
   };
 
   mobileMenuBtn.addEventListener("click", animateMenu);
-})();
 
-const header = (function () {
-  const header = document.querySelector("header");
-
-  const checkScroll = function () {
-    const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > 64) {
-      header.classList.add("solid-bg");
-    } else {
-      header.classList.remove("solid-bg");
-    }
-  };
-
-  //window.addEventListener("scroll", checkScroll);
+  return { setMenuAnimation };
 })();

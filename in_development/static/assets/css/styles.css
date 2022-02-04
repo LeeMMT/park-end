@@ -7,7 +7,6 @@
 /*CSS Variables Start*/
 
 :root {
-  --bg-color: #ebebeb;
   --primary-color: #204820;
   --black: hsla(120, 6%, 7%);
   --text-secondary: hsla(0, 0%, 33%);
@@ -22,7 +21,7 @@
 
 .splash {
   padding: 64px 0;
-  background-color: var(--light-grey);
+  /* background-color: var(--light-grey); */
   margin: 64px 0;
 }
 
@@ -38,11 +37,16 @@ body {
 }
 
 body {
-  background-color: var(--bg-color);
+  padding-top: 128.33px;
+  background-color: var(--white);
   color: var(--black);
   font-family: "poppins reg", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
+}
+
+body.home {
+  padding-top: 0 !important;
 }
 
 .content {
@@ -55,23 +59,33 @@ body {
 
 header {
   position: fixed;
+  top: 0;
   width: 100%;
-  background-color: transparent;
-  transition: all 1s ease;
+  background-color: var(--white);
+  transition: all 0.5s ease;
   z-index: 1;
 }
 
+header.home {
+  background-color: transparent;
+}
+
 header.solid-bg {
-  background-color: var(--white);
+  background-color: var(--white) !important;
+}
+
+header .nav-wrapper {
+  border-top: solid 1px var(--light-grey) !important;
+  border-bottom: none;
+  transition: border-top 1s ease;
+}
+
+header.home .nav-wrapper {
+  border-bottom: solid 1px var(--light-grey);
 }
 
 header.solid-bg .nav-wrapper {
-  border-top: solid 1px var(--light-grey) !important;
   border-bottom: none !important;
-}
-
-header.solid-bg * {
-  color: var(--black) !important;
 }
 
 header.solid-bg .dropdown-wrapper li:hover a {
@@ -103,7 +117,7 @@ p.company-name {
 
 .nav-wrapper {
   width: 100%;
-  height: 40px;
+  height: 34px;
   background-color: transparent;
   border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;
@@ -117,12 +131,13 @@ p.company-name {
   align-items: center;
   justify-content: center;
   font-family: "poppins reg";
+  font-size: 14px;
   line-height: 1em;
 }
 
 .top-nav > ul {
   display: block;
-  margin-top: 12px;
+  margin-top: 9px;
 }
 
 .top-nav li,
@@ -140,24 +155,44 @@ p.company-name {
   margin-left: 0;
 }
 
+header.home .top-nav > ul > li > a:link {
+  color: var(--white);
+}
+
+header.home .top-nav > ul > li > a:visited {
+  color: var(--white);
+}
+
+header.home .top-nav > ul > li > a:hover {
+  color: var(--white);
+}
+
+header.home .top-nav > ul > li > a:active {
+  color: var(--white);
+}
+
 a {
   text-decoration: none;
 }
 
-a:link {
-  color: var(--white);
+a:link,
+header.home.solid-bg a:link {
+  color: var(--black);
 }
 
-a:visited {
-  color: var(--white);
+a:visited,
+header.home.solid-bg ul > li > a:visited {
+  color: var(--black);
 }
 
-a:hover {
-  color: var(--white);
+a:hover,
+header.home.solid-bg ul > li > a:hover {
+  color: var(--black);
 }
 
-a:active {
-  color: var(--white);
+a:active,
+header.home.solid-bg ul > li > a:active {
+  color: var(--black);
 }
 
 /*Dropdown Menu Begin*/
@@ -176,8 +211,16 @@ a:active {
 }
 
 .dropdown-wrapper p {
-  color: var(--white);
+  color: var(--black);
   letter-spacing: 1px;
+}
+
+header.home .dropdown-wrapper p {
+  color: var(--white);
+}
+
+header.solid-bg .dropdown-wrapper p {
+  color: var(--black);
 }
 
 .dropdown-wrapper ul {
@@ -301,7 +344,6 @@ a:active {
   max-width: 1400px;
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -389,6 +431,47 @@ input:focus {
   height: auto;
   margin: 0 auto;
 }
+
+/*Banner Begin*/
+
+.banner {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.banner.environment {
+  background-image: url(../images/environment/environment-banner.jpeg);
+}
+
+.banner-inner {
+  max-width: 700px;
+  width: 100%;
+  height: max-content;
+  padding: 16px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 14px;
+}
+
+.banner-inner h1 {
+  color: var(--black);
+  font-family: "playfair med", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+/*Banner End*/
 
 /*Image Slider Begin*/
 
@@ -684,7 +767,7 @@ span.seperator {
 }
 
 @media screen and (max-width: 700px) {
-  /*.top-nav ul {
+  .top-nav ul {
     display: none;
   }
   .top-nav {
@@ -694,7 +777,7 @@ span.seperator {
   }
   #menu-container {
     display: block;
-  }*/
+  }
 }
 
 @media screen and (max-width: 600px) {

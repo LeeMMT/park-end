@@ -62,6 +62,7 @@ header {
   top: 0;
   width: 100%;
   background-color: var(--white);
+  box-shadow: hsla(120, 6%, 7%, 0.2) 0px 8px 24px;
   transition: all 0.5s ease;
   z-index: 1;
 }
@@ -464,6 +465,12 @@ input:focus {
   font-size: 14px;
 }
 
+.banner-inner.mobile {
+  display: none;
+  width: calc(100% - 32px);
+  margin: -64px auto 0 auto;
+}
+
 .banner-inner h1 {
   color: var(--black);
   font-family: "playfair med", Arial, Helvetica, sans-serif;
@@ -601,6 +608,33 @@ input:focus {
 
 /*Image Slider End*/
 
+/*Environment Page Begin*/
+
+.text-wrapper {
+  max-width: 800px;
+  color: var(--text-secondary);
+  line-height: 1.7em;
+  margin: 0 auto 32px auto;
+}
+
+.text-wrapper p {
+  margin-bottom: 16px;
+}
+
+.text-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+
+.full-width-img {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
+  object-fit: contain;
+  margin: 0 auto 32px auto;
+}
+
+/*Environment Page End*/
+
 /*Footer Start*/
 
 footer {
@@ -635,6 +669,10 @@ footer section:first-of-type ul {
   padding: 8px;
 }
 
+.footer-grid a {
+  color: var(--white);
+}
+
 /*Footer End*/
 
 /*Icons Start*/
@@ -663,6 +701,7 @@ footer section:first-of-type ul {
 /*Misc Begin*/
 
 .small-header {
+  color: var(--black) !important;
   font-family: "playfair med", Arial, Helvetica, sans-serif !important;
   font-size: 24px !important;
   margin-bottom: 16px !important;
@@ -761,6 +800,9 @@ span.seperator {
   .hero-content {
     padding: 0 16px;
   }
+  .container {
+    padding: 0 16px;
+  }
   footer {
     padding: 32px 16px;
   }
@@ -777,6 +819,12 @@ span.seperator {
   }
   #menu-container {
     display: block;
+  }
+  .banner-inner {
+    display: none;
+  }
+  .banner-inner.mobile {
+    display: flex;
   }
 }
 

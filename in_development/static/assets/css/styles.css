@@ -7,7 +7,7 @@
 /*CSS Variables Start*/
 
 :root {
-  --primary-color: #204820;
+  --primary-color: #648767;
   --black: hsla(120, 6%, 7%);
   --text: hsla(0, 0%, 33%);
   --light-grey: #e0e0e0;
@@ -18,17 +18,6 @@
 /*CSS Variables End*/
 
 /*Foundation Start*/
-
-.splash {
-  /* background-color: var(--light-grey); */
-  margin: 64px 0;
-}
-
-.container {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-}
 
 html,
 body {
@@ -50,6 +39,48 @@ body.home {
 
 .content {
   flex: 1 0 auto;
+}
+
+.splash {
+  /* background-color: var(--light-grey); */
+  margin: 64px 0;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home .text-wrapper {
+  line-height: 1.7em;
+}
+
+.text-wrapper p {
+  margin-bottom: 16px;
+}
+
+.text-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+
+.simple-btn {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 2px 8px;
+  background-color: var(--primary-color);
+  color: var(--white) !important;
+  margin-top: 16px;
+}
+
+.simple-btn:hover {
+  background-color: var(--black);
+}
+
+.simple-btn i {
+  width: 20px;
+  height: 20px;
 }
 
 /*Foundation End*/
@@ -147,7 +178,7 @@ p.company-name {
 }
 
 .top-nav > ul > li > a {
-  margin-left: 16px;
+  margin-left: 24px;
   letter-spacing: 1px;
 }
 
@@ -202,7 +233,7 @@ header.home.solid-bg ul > li > a:active {
   height: min-content;
   display: inline-flex;
   flex-direction: column;
-  margin-left: 16px;
+  margin-left: 24px;
   z-index: 1;
 }
 
@@ -660,23 +691,45 @@ input:focus {
   cursor: pointer;
 }
 
+/*Widescreen 2 Col Start*/
+
+.two-col {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 32px;
+}
+
+.two-col img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.home .two-col > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home .two-col a {
+  margin-left: 16px;
+}
+
+.home .two-col a:first-of-type {
+  margin-left: 0;
+}
+
+/*Widescreen 2 Col End*/
+
 /*Image Slider End*/
 
 /*Environment Page Begin*/
 
-.text-wrapper {
+.environment .text-wrapper {
   max-width: 800px;
   color: var(--text);
   line-height: 1.7em;
   margin: 0 auto 32px auto;
-}
-
-.text-wrapper p {
-  margin-bottom: 16px;
-}
-
-.text-wrapper p:last-of-type {
-  margin-bottom: 0;
 }
 
 .full-width-img {
@@ -746,6 +799,13 @@ footer section:first-of-type ul {
   transform: rotate(180deg);
 }
 
+.thick-arrow-right {
+  display: block;
+  background-image: url("../icons/right-arrow-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .leaves {
   display: block;
   background-image: url("../icons/leaves.svg");
@@ -776,6 +836,10 @@ footer section:first-of-type ul {
   font-family: "playfair med", Arial, Helvetica, sans-serif !important;
   font-size: 24px !important;
   margin-bottom: 16px !important;
+}
+
+.flex-row {
+  display: flex;
 }
 
 span.seperator {

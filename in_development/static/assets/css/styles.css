@@ -505,6 +505,10 @@ input:focus {
   background-image: url(../images/environment/environment-banner.jpeg);
 }
 
+.banner.pork {
+  background-image: url(../images/animals/pork/pork-banner.jpeg);
+}
+
 .banner-inner {
   max-width: 700px;
   width: 100%;
@@ -691,37 +695,52 @@ input:focus {
   cursor: pointer;
 }
 
+/*Image Slider End*/
+
 /*Widescreen 2 Col Start*/
 
-.two-col {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 32px;
-}
-
-.two-col img {
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.home .two-col > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.home .two-col a {
-  margin-left: 16px;
-}
-
-.home .two-col a:first-of-type {
-  margin-left: 0;
+.home-about .text-wrapper {
+  max-width: 800px;
+  line-height: 1.7em;
+  margin: 0 auto;
 }
 
 /*Widescreen 2 Col End*/
 
-/*Image Slider End*/
+/*Text Multi Image Section Start*/
+
+.multi-image {
+  width: 100%;
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/animals/piggies.jpeg);
+}
+
+.multi-image .inner {
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.multi-image a {
+  color: var(--white);
+  font-family: "playfair reg", Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 1.7em;
+  cursor: pointer;
+}
+
+.multi-image a:hover {
+  border-bottom: solid 1px var(--white);
+}
+
+/*Text Multi Image Section End*/
 
 /*Environment Page Begin*/
 
@@ -870,26 +889,6 @@ span.seperator {
 /*Misc End*/
 
 /*Fonts*/
-
-@font-face {
-  font-family: "lora reg";
-  src: url("../fonts/Lora/Lora-Regular.ttf");
-}
-
-@font-face {
-  font-family: "lora med";
-  src: url("../fonts/Lora/Lora-Medium.ttf");
-}
-
-@font-face {
-  font-family: "lora semib";
-  src: url("../fonts/Lora/Lora-SemiBold.ttf");
-}
-
-@font-face {
-  font-family: "lora bold";
-  src: url("../fonts/Lora/Lora-Bold.ttf");
-}
 
 @font-face {
   font-family: "playfair reg";

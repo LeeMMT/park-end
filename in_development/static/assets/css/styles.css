@@ -8,6 +8,7 @@
 
 :root {
   --primary-color: #648767;
+  --primary-light: #cad8cb;
   --black: hsla(120, 6%, 7%);
   --text: hsla(0, 0%, 33%);
   --light-grey: #e0e0e0;
@@ -25,7 +26,7 @@ body {
 }
 
 body {
-  padding-top: 128.33px;
+  padding-top: 122px;
   background-color: var(--white);
   color: var(--text);
   font-family: "poppins reg", Arial, Helvetica, sans-serif;
@@ -106,7 +107,7 @@ header.solid-bg {
 }
 
 header .nav-wrapper {
-  border-top: solid 1px var(--light-grey) !important;
+  border-top: solid 1px var(--light-grey);
   border-bottom: none;
   transition: border-top 1s ease;
 }
@@ -130,20 +131,38 @@ header img.logo {
   margin: 0 auto;
 }
 
-p.company-name {
-  padding: 32px 0;
-  color: var(--white);
-  text-align: center;
-  font-family: "poppins med", Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  letter-spacing: 3px;
-}
-
 .company-logo {
   display: block;
-  max-width: 300px;
-  padding: 16px 0;
+  width: max-content;
+  padding: 32px 0;
+  color: var(--black);
+  font-family: "poppins med", Arial, Helvetica, sans-serif;
+  font-size: 40px;
   margin: 0 auto;
+  letter-spacing: 1px;
+}
+
+.company-logo.mobile {
+  display: none;
+  padding: 0;
+  color: var(--black);
+  font-size: 18px;
+  margin: unset;
+}
+
+.mobile-menu .company-logo.mobile {
+  padding: 16px;
+}
+
+.home .company-logo {
+  color: var(--white);
+}
+
+.home .mobile-menu .company-logo {
+  color: var(--black);
+}
+.home .solid-bg .company-logo {
+  color: var(--black);
 }
 
 .nav-wrapper {
@@ -304,8 +323,8 @@ header.solid-bg .dropdown-wrapper p {
 
 #menu-container {
   display: none;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .mobile-menu {
@@ -509,28 +528,7 @@ input:focus {
   background-image: url(../images/animals/pork/pork-banner.jpeg);
 }
 
-.banner-inner {
-  max-width: 700px;
-  width: 100%;
-  height: max-content;
-  padding: 16px;
-  background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--text);
-  text-align: center;
-  font-size: 14px;
-}
-
-.banner-inner.mobile {
-  display: none;
-  width: calc(100% - 32px);
-  margin: -64px auto 0 auto;
-}
-
-.banner-inner h1 {
+h1.page-title {
   color: var(--black);
   font-family: "playfair med", Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -857,6 +855,25 @@ footer section:first-of-type ul {
   margin-bottom: 16px !important;
 }
 
+.underlined {
+  display: inline-block;
+  width: max-content;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.underlined:after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: var(--primary-light);
+  transform: translateZ(-1px);
+}
+
 .flex-row {
   display: flex;
 }
@@ -943,13 +960,30 @@ span.seperator {
 }
 
 @media screen and (max-width: 700px) {
+  body {
+    padding-top: 50px;
+  }
+  header {
+    box-shadow: none;
+  }
+  .company-logo {
+    display: none;
+  }
+  .company-logo.mobile {
+    display: inline-block;
+  }
   .top-nav ul {
     display: none;
   }
+  .nav-wrapper {
+    height: 50px;
+    border: none !important;
+  }
   .top-nav {
     height: 100%;
+    border: none;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
   #menu-container {
     display: block;

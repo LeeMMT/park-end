@@ -55,3 +55,31 @@ const mobileMenu = (function () {
 
   return { setMenuAnimation };
 })();
+
+const accordianModule = (function () {
+  const accordianitems = document.querySelectorAll(".accordian-item");
+  const arrowIcon = document.querySelector(".accordian .arrow-down");
+
+  const resetSubItems = () => {
+    accordianSubItems.forEach((el) => {
+      el.style.height = 0;
+      el.classList.remove("open");
+    });
+  };
+
+  const toggleMenu = (e) => {
+    arrowIcon.classList.toggle("rotated");
+    if (e.target.nextElementSibling.classList.contains("open")) {
+      e.target.nextElementSibling.style.height = 0;
+      e.target.nextElementSibling.classList.toggle("open");
+      if (e.target.classList.contains("has-sub")) {
+        resetSubItems();
+      }
+    } else {
+      e.target.nextElementSibling.style.height = `${e.target.nextElementSibling.scrollHeight}px`;
+      e.target.nextElementSibling.classList.toggle("open");
+    }
+  };
+
+  accordianitems.forEach((el) => el.addEventListener("click", toggleMenu));
+})();

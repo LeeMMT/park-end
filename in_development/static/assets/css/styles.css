@@ -883,8 +883,9 @@ footer section:first-of-type ul {
 }
 
 .footer-grid {
-  display: grid;
   max-width: 1400px;
+  display: grid;
+  justify-items: center;
   grid-template-columns: auto auto auto;
   column-gap: 16px;
   margin: 0 auto;

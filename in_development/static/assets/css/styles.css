@@ -833,6 +833,66 @@ h1.page-title {
 
 /*Animal Page End*/
 
+/*Trades Form Starts*/
+
+form .row {
+  display: flex;
+  align-items: baseline;
+}
+
+form .col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.trades-form {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.trades-form * {
+  color: var(--text);
+}
+
+.trades-form .row {
+  background-color: #fff;
+  padding: 8px;
+  border: solid 1px #ebebeb;
+  border-radius: 2px;
+}
+
+.trades-form label {
+  color: var(--black);
+  font-family: 'poppins med';
+  font-size: 14px;
+}
+
+.trades-form .row label {
+  width: 100%;
+  cursor: pointer;
+}
+
+.trades-form input,
+.trades-form textarea,
+.trades-form select {
+  border: solid 1px #ebebeb;
+  border-radius: 2px;
+}
+
+input[type='submit'] {
+  width: max-content;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/*Trades Form Ends*/
+
 /*Footer Start*/
 
 footer {

@@ -26,8 +26,10 @@ body {
 }
 
 body {
-  padding-top: 122px;
+  padding-top: 150px;
   background-color: var(--white);
+  display: flex;
+  flex-direction: column;
   color: var(--text);
   font-family: 'poppins reg', Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -249,7 +251,7 @@ header.solid-bg .dropdown-wrapper p {
   display: none;
   flex-direction: column;
   background-color: var(--white);
-  margin-top: 18px;
+  margin-top: 10px;
   margin-right: 0;
   z-index: 1;
 }

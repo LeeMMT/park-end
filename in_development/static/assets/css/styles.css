@@ -29,7 +29,7 @@ body {
   padding-top: 122px;
   background-color: var(--white);
   color: var(--text);
-  font-family: "poppins reg", Arial, Helvetica, sans-serif;
+  font-family: 'poppins reg', Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
 }
@@ -136,7 +136,7 @@ header img.logo {
   width: max-content;
   padding: 32px 0;
   color: var(--black);
-  font-family: "poppins med", Arial, Helvetica, sans-serif;
+  font-family: 'poppins med', Arial, Helvetica, sans-serif;
   font-size: 40px;
   margin: 0 auto;
   letter-spacing: 1px;
@@ -180,7 +180,7 @@ header img.logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "poppins reg";
+  font-family: 'poppins reg';
   font-size: 14px;
   line-height: 1em;
 }
@@ -243,6 +243,10 @@ header.home.solid-bg ul > li > a:hover {
 a:active,
 header.home.solid-bg ul > li > a:active {
   color: var(--black);
+}
+
+header.home.solid-bg a {
+  color: var(--black) !important;
 }
 
 /*Dropdown Menu Begin*/
@@ -408,7 +412,7 @@ header.solid-bg .dropdown-wrapper p {
   align-items: center;
   background: var(--white);
   font-size: 16px;
-  font-family: "poppins reg", Arial, Helvetica, sans-serif;
+  font-family: 'poppins reg', Arial, Helvetica, sans-serif;
   text-align: left;
   margin: 0;
 }
@@ -508,18 +512,18 @@ input {
   border: solid 2px transparent;
   outline: none;
   color: var(--black);
-  font-family: "poppins reg", Arial, Helvetica, sans-serif;
+  font-family: 'poppins reg', Arial, Helvetica, sans-serif;
   font-size: 16px;
   margin-bottom: 8px;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background-color: var(--white);
   color: var(--black);
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background-color: var(--black);
   color: var(--white);
 }
@@ -539,7 +543,7 @@ input:focus {
   padding: 16px;
   background-color: hsla(0, 0%, 100%, 0.85);
   text-align: left;
-  font-family: "poppins reg", Arial, Helvetica, sans-serif;
+  font-family: 'poppins reg', Arial, Helvetica, sans-serif;
 }
 
 /*.opening-times-container .secondary-text {
@@ -602,7 +606,7 @@ input:focus {
 
 h1.page-title {
   color: var(--black);
-  font-family: "playfair med", Arial, Helvetica, sans-serif;
+  font-family: 'playfair med', Arial, Helvetica, sans-serif;
   font-size: 24px;
   margin-bottom: 16px;
 }
@@ -668,7 +672,7 @@ h1.page-title {
 
 .story-board:nth-of-type(2) {
   background-color: var(--primary-color);
-  background-image: url("../images/storyboard/board1.jpeg");
+  background-image: url('../images/storyboard/board1.jpeg');
 }
 
 .story-board:nth-of-type(3) {
@@ -685,7 +689,7 @@ h1.page-title {
 
 .story-board:nth-of-type(5) {
   background-color: var(--primary-color);
-  background-image: url("../images/storyboard/board1.jpeg");
+  background-image: url('../images/storyboard/board1.jpeg');
 }
 
 .story-inner {
@@ -712,7 +716,7 @@ h1.page-title {
   background-color: hsla(0, 0%, 100%, 0.2);
   display: flex;
   align-items: center;
-  font-family: "playfair reg", Arial, Helvetica, sans-serif;
+  font-family: 'playfair reg', Arial, Helvetica, sans-serif;
   font-size: 24px;
   line-height: 1.3em;
 }
@@ -739,7 +743,7 @@ h1.page-title {
 }
 
 .story-inner.second p:first-of-type {
-  font-family: "playfair reg";
+  font-family: 'playfair reg';
   font-size: 24px;
   margin-bottom: 16px;
 }
@@ -801,7 +805,7 @@ h1.page-title {
 
 .multi-image a {
   color: var(--white);
-  font-family: "playfair reg", Arial, Helvetica, sans-serif;
+  font-family: 'playfair reg', Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: 1.7em;
   cursor: pointer;
@@ -863,7 +867,7 @@ footer {
   padding: 32px 0;
   background-color: var(--black);
   color: hsl(0, 0%, 85%);
-  font-family: "poppins light", Arial, Helvetica, sans-serif;
+  font-family: 'poppins light', Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
 
@@ -911,14 +915,14 @@ footer section:first-of-type ul {
 
 .arrow-left {
   display: block;
-  background-image: url("../icons/left-chevron.svg");
+  background-image: url('../icons/left-chevron.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .arrow-right {
   display: block;
-  background-image: url("../icons/left-chevron.svg");
+  background-image: url('../icons/left-chevron.svg');
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(180deg);
@@ -926,7 +930,7 @@ footer section:first-of-type ul {
 
 .arrow-down {
   display: block;
-  background-image: url("../icons/left-chevron.svg");
+  background-image: url('../icons/left-chevron.svg');
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(270deg);
@@ -939,28 +943,28 @@ footer section:first-of-type ul {
 
 .thick-arrow-right {
   display: block;
-  background-image: url("../icons/right-arrow-white.svg");
+  background-image: url('../icons/right-arrow-white.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .leaves {
   display: block;
-  background-image: url("../icons/leaves.svg");
+  background-image: url('../icons/leaves.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .quality {
   display: block;
-  background-image: url("../icons/quality.svg");
+  background-image: url('../icons/quality.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .pig {
   display: block;
-  background-image: url("../icons/pig.svg");
+  background-image: url('../icons/pig.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -971,7 +975,7 @@ footer section:first-of-type ul {
 
 .small-header {
   color: var(--black) !important;
-  font-family: "playfair med", Arial, Helvetica, sans-serif !important;
+  font-family: 'playfair med', Arial, Helvetica, sans-serif !important;
   font-size: 24px !important;
   margin-bottom: 16px !important;
 }
@@ -992,7 +996,7 @@ footer section:first-of-type ul {
   bottom: -3px;
   left: 0;
   display: block;
-  content: "";
+  content: '';
   width: 100%;
   height: 10px;
   background-color: var(--primary-light);
@@ -1033,38 +1037,38 @@ span.seperator {
 /*Fonts*/
 
 @font-face {
-  font-family: "playfair reg";
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf");
+  font-family: 'playfair reg';
+  src: url('../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf');
 }
 
 @font-face {
-  font-family: "playfair med";
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-Medium.ttf");
+  font-family: 'playfair med';
+  src: url('../fonts/Playfair_Display/PlayfairDisplay-Medium.ttf');
 }
 
 @font-face {
-  font-family: "playfair bold";
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf");
+  font-family: 'playfair bold';
+  src: url('../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf');
 }
 
 @font-face {
-  font-family: "poppins reg";
-  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+  font-family: 'poppins reg';
+  src: url('../fonts/Poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
-  font-family: "poppins light";
-  src: url("../fonts/Poppins/Poppins-Light.ttf");
+  font-family: 'poppins light';
+  src: url('../fonts/Poppins/Poppins-Light.ttf');
 }
 
 @font-face {
-  font-family: "poppins med";
-  src: url("../fonts/Poppins/Poppins-Medium.ttf");
+  font-family: 'poppins med';
+  src: url('../fonts/Poppins/Poppins-Medium.ttf');
 }
 
 @font-face {
-  font-family: "poppins semib";
-  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+  font-family: 'poppins semib';
+  src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
 }
 
 /*Media Queries Begin*/

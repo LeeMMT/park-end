@@ -111,14 +111,25 @@ header .dropdown-wrapper li:hover a {
 }
 
 header .logo {
-  display: block;
-  width: 150px;
-  padding: 16px;
   margin: 0 auto;
+  display: block;
+  width: max-content;
+}
+
+header .logo img {
+  display: block;
+  max-width: 150px;
+  width: 100%;
+  padding: 16px;
 }
 
 .mobile-logo {
   display: none;
+  height: 100%;
+}
+
+.mobile-logo img {
+  height: 100%;
 }
 
 .nav-wrapper {
@@ -381,10 +392,13 @@ header a {
 }
 
 .accordian-item__sub li {
+  padding: 0;
   border-top: solid 1px #d1d1d1;
 }
 
 .accordian-item__sub a {
+  width: 100%;
+  padding: 16px;
   display: block;
   font-size: 0.9rem;
   position: relative;
@@ -425,10 +439,31 @@ header a {
 }
 
 .hero-content {
+  z-index: 1;
   max-width: 1400px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.promotion {
+  max-width: 400px;
+  padding: 16px;
+  background-color: hsla(0, 0%, 100%, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pomotion-heading {
+}
+
+.promotion .simple-btn {
+  background-color: var(--black);
+}
+
+.promotion .simple-btn:hover {
+  background-color: var(--primary-color);
 }
 
 .newsletter-signup {
@@ -820,6 +855,7 @@ form .col {
   max-width: 800px;
   width: 100%;
   padding: 32px;
+  box-shadow: hsla(120, 6%, 7%, 0.2) 0px 8px 24px;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -976,7 +1012,7 @@ footer section:first-of-type ul {
 
 /*Misc Begin*/
 
-.small-header {
+.small-heading {
   color: var(--black) !important;
   font-family: 'playfair med', Arial, Helvetica, sans-serif !important;
   font-size: 24px !important;
@@ -1110,9 +1146,6 @@ span.seperator {
   .mobile-logo {
     display: block;
   }
-  .top-nav ul {
-    display: none;
-  }
   .nav-wrapper {
     height: 60px;
     box-shadow: hsla(120, 6%, 7%, 0.2) 0px 8px 24px;
@@ -1123,6 +1156,9 @@ span.seperator {
     border: none;
     align-items: center;
     justify-content: flex-end;
+  }
+  .top-nav ul {
+    display: none;
   }
   #menu-container {
     display: block;

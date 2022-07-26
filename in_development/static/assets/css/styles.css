@@ -91,7 +91,7 @@ header {
   top: 0;
   width: 100%;
   background-color: var(--white);
-  box-shadow: hsla(120, 6%, 7%, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: all 0.5s ease;
   z-index: 2;
 }
@@ -226,7 +226,7 @@ header a {
   display: none;
   flex-direction: column;
   background-color: var(--white);
-  box-shadow: hsla(120, 6%, 7%, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   margin-top: 10px;
   margin-right: 0;
   z-index: 1;
@@ -304,11 +304,8 @@ header a {
 }
 
 .mobile-menu li {
-  padding: 16px;
+  padding: 0;
   border-top: solid 1px var(--light-grey);
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
 }
 
 .mobile-menu li:last-of-type {
@@ -316,7 +313,11 @@ header a {
 }
 
 .mobile-menu a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
   margin: 0;
 }
 
@@ -355,7 +356,8 @@ header a {
 .btn {
   position: relative;
   width: 100%;
-  padding: 16px 18px;
+  padding: 16px 16px 10px;
+  margin: 0;
   border: none;
   display: flex;
   justify-content: space-between;
@@ -398,7 +400,6 @@ header a {
 
 .accordian-item__sub a {
   width: 100%;
-  padding: 16px;
   display: block;
   font-size: 0.9rem;
   position: relative;
@@ -450,6 +451,7 @@ header a {
   max-width: 400px;
   padding: 16px;
   background-color: hsla(0, 0%, 100%, 0.85);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -855,7 +857,7 @@ form .col {
   max-width: 800px;
   width: 100%;
   padding: 32px;
-  box-shadow: hsla(120, 6%, 7%, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -897,6 +899,122 @@ input[type='submit'] {
 }
 
 /*Trades Form Ends*/
+
+/*Team Page*/
+
+.team-entry {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  padding: 64px 16px;
+  border-bottom: solid 1px var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px 64px;
+  flex-wrap: wrap;
+}
+
+.team-entry:first-child {
+  padding-top: 0;
+}
+
+.team-entry:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.team-entry img {
+  display: block;
+  max-width: 200px;
+}
+
+.team-entry .text-wrapper {
+  margin: 0;
+  height: max-content;
+  flex: 1 1 500px;
+}
+
+/*Blog*/
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  justify-content: center;
+}
+
+.article-preview {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.article-preview .article-heading {
+  padding: 16px 16px 0;
+  margin-bottom: 8px;
+  display: inline-block;
+  color: var(--black);
+  font-family: 'RSlab Reg', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.article-preview .article-heading:hover {
+  text-decoration: underline;
+}
+
+.article-preview img {
+  max-width: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.article-preview p {
+  margin-bottom: 0 16px;
+  padding: 0 16px 16px;
+  line-height: 1.6em;
+}
+
+.article-preview p:last-child {
+  margin-bottom: 0;
+}
+
+.latest-article {
+  margin-bottom: 64px;
+}
+
+.latest-article img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.latest-article .article-heading {
+  display: block;
+  width: max-content;
+  margin: 0 auto 8px;
+}
+
+.latest-article p {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+/*Blog Entry*/
+
+.article h2 {
+  margin-bottom: 0;
+}
+
+.publish-date {
+  margin-bottom: 16px;
+}
+
+.article img {
+  margin-bottom: 32px;
+  width: 100%;
+}
 
 /*Footer Start*/
 
@@ -1011,6 +1129,10 @@ footer section:first-of-type ul {
 /*Icons End*/
 
 /*Misc Begin*/
+
+.text-center {
+  text-align: center;
+}
 
 .small-heading {
   color: var(--black) !important;
@@ -1148,7 +1270,7 @@ span.seperator {
   }
   .nav-wrapper {
     height: 60px;
-    box-shadow: hsla(120, 6%, 7%, 0.2) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border: none !important;
   }
   .top-nav {

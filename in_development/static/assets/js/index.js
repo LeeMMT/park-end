@@ -4,16 +4,19 @@ const multiImageComponent = (function () {
     const dataI = e.target.getAttribute('data-i')
     switch (+dataI) {
       case 1:
-        multiImageSection.style.backgroundImage = 'url(../static/assets/images/animals/cattle.jpeg)'
+        multiImageSection.style.backgroundImage = 'url(../static/assets/images/animals/cattle.webp)'
         break
       case 2:
-        multiImageSection.style.backgroundImage = 'url(../static/assets/images/animals/piglet.jpeg)'
+        multiImageSection.style.backgroundImage = 'url(../static/assets/images/animals/chickens.webp)'
         break
       case 3:
-        multiImageSection.style.backgroundImage = 'url(../static/assets/images/animals/cattle.jpeg)'
+        multiImageSection.style.backgroundImage = 'url(../static/assets/images/eggs.webp)'
         break
       case 4:
-        multiImageSection.style.backgroundImage = 'url(../static/assets/images/animals/piggies.jpeg)'
+        multiImageSection.style.backgroundImage = 'url(../static/assets/images/animals/sheep.webp)'
+        break
+      case 5:
+        multiImageSection.style.backgroundImage = 'url(../static/assets/images/animals/piggies.webp)'
         break
     }
   }
